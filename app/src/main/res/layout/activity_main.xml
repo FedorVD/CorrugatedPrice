@@ -6,11 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginTop="40dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Расчет цены гофротары"
+           android:textSize="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/Light_gray"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,20 +55,21 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/blockBoxSize"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/light_yellow"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Внутренние размеры"
-                android:textSize="20dp"/>
+                android:textSize="18dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -118,12 +130,13 @@
             android:id="@+id/blockBlankSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/light_green_gray"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Размеры заготовки"
-                android:textSize="20dp"/>
+                android:textSize="18dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -138,7 +151,9 @@
                     android:id="@+id/blankLength"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -154,7 +169,9 @@
                     android:id="@+id/blankWidth"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,23 +187,26 @@
                     android:id="@+id/blankSquare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/light_yellow_gray"
         android:orientation="horizontal">
         <CheckBox
             android:id="@+id/isPallet"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Паллетирование" />
         <CheckBox
             android:id="@+id/isPrint"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Печать" />
         <Button
@@ -198,8 +218,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/light_pink_gray"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -219,7 +240,8 @@
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginLeft="75dp"/>
+                    android:layout_marginLeft="75dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -234,7 +256,9 @@
                     android:id="@+id/directCost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -249,7 +273,26 @@
                     android:id="@+id/covenantCost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Себестоимость"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/primeCost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -286,7 +329,9 @@
                     android:id="@+id/cost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
 

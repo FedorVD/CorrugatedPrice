@@ -10,10 +10,13 @@ import java.util.List;
 public interface CostFundsDao {
 
     @Insert
-    long insert(Raw raw);
+    long insert(CostFunds costFunds);
 
     @Query("SELECT * FROM costfundstable")
     List<Raw> getAll();
+
+    @Query("SELECT * FROM costfundstable WHERE name = :name")
+    CostFunds getByName(String name);
 
     @Query("DELETE FROM costfundstable")
         //"DROP TABLE mytable"

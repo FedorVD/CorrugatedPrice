@@ -14,6 +14,9 @@ public interface RawDao {
     @Query("SELECT * FROM rawtable")
     List<Raw>getAll();
 
+    @Query("SELECT * FROM rawtable WHERE name = :name")
+    Raw getByName(String name);
+
     @Query("DELETE FROM rawtable")
         //"DROP TABLE mytable"
     int clearAll();

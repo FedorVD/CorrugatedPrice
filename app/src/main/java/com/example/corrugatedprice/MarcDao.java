@@ -9,10 +9,13 @@ import java.util.List;
 @Dao
 public interface MarcDao {
     @Insert
-    long insert(Raw raw);
+    long insert(Mark mark);
 
     @Query("SELECT * FROM marktable")
     List<Raw> getAll();
+
+    @Query("SELECT * FROM marktable WHERE name = :name")
+    Mark getByName(String name);
 
     @Query("DELETE FROM marktable")
         //"DROP TABLE mytable"
